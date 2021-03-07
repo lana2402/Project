@@ -1,0 +1,138 @@
+// main: style.less
+
+.header{
+    position: absolute;
+    width: 100%;
+
+}
+.header_inner{
+    padding: 1.2rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header_cont1{
+    display: flex;
+
+}
+
+.header_img{
+    height: 57px;
+    width: 57px;
+
+    img{
+        border-radius: 50%;
+        width: 100%;
+    }
+}
+
+.header_txt{
+    margin-left: 9px;
+}
+.header_name{
+    font-size:1.02rem;
+    font-weight: bold;
+    line-height: 18px;
+    opacity: 80%;
+}
+
+.header_profesion{
+    padding-top: 3px;
+    font-size:0.8rem;
+
+    color: fade(@black,70%)
+}
+
+.header_cont2{
+    align-items: center;
+    position: relative;
+    &.secnd{
+
+    }
+}
+.nav_link{
+    color: @black;
+
+    font-size: 0.93rem;
+    font-weight: bold;
+
+    text-transform: uppercase;
+    text-decoration: none;
+
+    margin-left: 50px;
+    position: relative;
+    display: inline-block;
+
+    transition: color linear 0.2s,opacity linear 0.2s;
+
+    &:hover,
+    &.active{
+        color: @orange;
+    }
+
+    &.second{
+        color: lightgray;
+        font-size:0.8rem;
+        margin-left: 20px;
+    }
+
+    &:after{
+    display: block;
+    content: " ";
+    width: 100%;
+    height: 2px;
+    margin-top: 5px;
+    position: absolute;
+    background-color: @orange;
+    opacity: 0;
+    transition: opacity linear 0.15s;
+    cursor: default;
+    }
+
+    &:hover:after,
+    &.active:after{
+        opacity: 1;
+
+    }
+
+
+}
+.nav.btn{
+    color: @black;
+    background-color: @white;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 0.93rem;
+    font-weight: bold;
+
+    margin-left: 30px;
+    padding: 0.5rem 1.5rem;
+    border: 1.5px solid @black;
+    border-radius: 20px;
+
+
+    transition-property: color, background,box-shadow,border,transform;
+    transition-duration: .2s;
+    transition-timing-function: linear;
+
+
+    &:hover{
+        outline: none;
+        color: @white;
+        background-color: @orange;
+        border-color: @orange;
+        box-shadow: 0px 5px 10px gray;
+        }
+
+    &:focus{
+        outline: none;
+
+    }
+    &:active{
+        transform: scale(.97);
+    }
+
+}

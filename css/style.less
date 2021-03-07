@@ -1,0 +1,38 @@
+// compress:true
+@import 'var';
+@import 'header';
+@import 'intro';
+@import 'about me';
+@import 'footer';
+@import 'modal';
+
+html {
+    font-size: 15px;
+    scroll-behavior:smooth;
+
+}
+
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+
+    &.no_scroll{
+        overflow: hidden;
+    }
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin: 0 auto;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
